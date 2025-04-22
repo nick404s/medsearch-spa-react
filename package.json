@@ -6,7 +6,7 @@
   "homepage": "https://nick404s.github.io/medsearch-spa-react/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=BASE",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
