@@ -14,28 +14,33 @@ const queryClient = new QueryClient({
 import { loader as allMedicationsLoader } from "./pages/AllMedications";
 // npm install dompurify
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <HomeLayout />,
+      errorElement: <Error />,
+      children: [
+        {
+          index: true,
+          element: <Landing />,
+        },
+        {
+          path: "all-medications",
+          element: <AllMedications />,
+          loader: allMedicationsLoader(queryClient),
+        },
+        {
+          path: "details/:category/:name",
+          element: <Details />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <HomeLayout />,
-    errorElement: <Error />,
-    children: [
-      {
-        index: true,
-        element: <Landing />,
-      },
-      {
-        path: "all-medications",
-        element: <AllMedications />,
-        loader: allMedicationsLoader(queryClient),
-      },
-      {
-        path: "details/:category/:name",
-        element: <Details />,
-      },
-    ],
-  },
-]);
+    basename: "/medsearch-spa-react",
+  }
+);
 
 const App = () => {
   return (
