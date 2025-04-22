@@ -38,7 +38,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: "/medsearch-spa-react",
+    basename: import.meta.env.BASE_URL,
   }
 );
 
