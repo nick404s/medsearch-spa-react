@@ -5,5 +5,5 @@ import react from "@vitejs/plugin-react";
 // "homepage": "https://nick404s.github.io/medsearch-spa-react/",
 export default defineConfig({
   plugins: [react()],
-  base: "/medsearch-spa-react/",
+  // base: "/medsearch-spa-react/",
 });
