@@ -1,10 +1,5 @@
-## Single Page React App
+## MedSearch is a Single Page React App
 
-### Commands to run development server:
+### Allows a user search for medications by ingredient or condition
 
-npm install\
-npm run dev
-
-### Open the link to run in the browser:
-
-http://localhost:5173/
+#### Using OpenFDA data as a source
