@@ -236,6 +236,13 @@
     margin: 0 auto;
   }
 
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
   .title-underline {
     background: var(--primary-500);
     width: 7rem;

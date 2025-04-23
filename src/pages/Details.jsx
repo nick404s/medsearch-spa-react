@@ -17,7 +17,10 @@ const Details = () => {
   return (
     <Style>
       <div className="page">
-        <NavigationButton route={routeToReturn} />
+        <div className="nav-container">
+          <NavigationButton isBack={true} />
+          <NavigationButton isBack={false} />
+        </div>
         {isPageLoading ? (
           <Loading />
         ) : (

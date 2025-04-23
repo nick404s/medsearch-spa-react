@@ -62,7 +62,10 @@ const AllMedications = () => {
 
   return (
     <AllMedicationsContext.Provider value={{ data, searchTerm, searchBy }}>
-      <NavigationButton route={"/"} />
+      <div className="nav-container">
+        <NavigationButton isBack={true} />
+        <NavigationButton isBack={false} />
+      </div>
       <MedicationsContainer />
     </AllMedicationsContext.Provider>
   );
