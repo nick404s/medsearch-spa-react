@@ -179,6 +179,7 @@ Please change the parent <Route path="${C}"> to <Route path="${C==="/"?"*":`${C}
   .next-btn {
     /* background: var(--background-secondary-color); */
     border-color: transparent;
+    background: transparent;
     /* border-radius: var(--border-radius); */
     font-size: clamp(0.875rem, 1.5vw, 1rem);
     width: 100px;
@@ -191,13 +192,14 @@ Please change the parent <Route path="${C}"> to <Route path="${C==="/"?"*":`${C}
     justify-content: center;
     gap: 0.5rem;
     cursor: pointer;
-  }
-  .prev-btn:hover,
-  .next-btn:hover {
-    color: var(--primary-blue-900);
     transition: var(--transition);
-    transform: var(--transform-translate);
+    &:hover {
+      color: var(--primary-blue-900);
+      transition: var(--transition);
+      transform: var(--transform-translate);
+    }
   }
+
   .dots {
     display: grid;
     place-items: center;
