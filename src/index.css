@@ -11,7 +11,8 @@
   /* == colors ==*/
 
   /* blue */
-  --primary-blue-100: #d5ecfd;
+  --primary-blue-100: #d2e8fa;
+  --primary-blue-300: #b7dffe;
   --primary-blue-300: #a7d9ff;
   --primary-blue-500: #1e98fc;
   --primary-blue-700: #1A86DF;
@@ -240,7 +241,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
   }
 
   .title-underline {
