@@ -4,16 +4,14 @@ const NavigationButton = ({ route }) => {
   const navigate = useNavigate();
   return (
     <div className="navigation">
-      {/* <Link to={".."} preventScrollReset> */}
       <button
         className="btn-nav"
         onClick={() => {
-          navigate(route);
+          navigate(-1);
         }}
       >
         <HiChevronLeft /> Back
       </button>
-      {/* </Link> */}
     </div>
   );
 };
