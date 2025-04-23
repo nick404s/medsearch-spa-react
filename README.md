@@ -5,3 +5,5 @@
 ### Allows a user search for medications by ingredient or condition
 
 #### Using OpenFDA data as a source
+
+[Link to the OpenFDA API](https://open.fda.gov/apis/)
