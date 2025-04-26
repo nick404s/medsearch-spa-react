@@ -168,8 +168,6 @@ Please change the parent <Route path="${C}"> to <Route path="${C==="/"?"*":`${C}
     }
   }
   .active {
-    /* background: var(--primary-blue-500);
-    color: var(--white); */
     color: var(--primary-blue-500);
     &:hover {
       color: var(--primary-blue-700);
@@ -177,10 +175,8 @@ Please change the parent <Route path="${C}"> to <Route path="${C==="/"?"*":`${C}
   }
   .prev-btn,
   .next-btn {
-    /* background: var(--background-secondary-color); */
     border-color: transparent;
     background: transparent;
-    /* border-radius: var(--border-radius); */
     font-size: clamp(0.875rem, 1.5vw, 1rem);
     width: 100px;
     height: 40px;
@@ -287,16 +283,14 @@ Please change the parent <Route path="${C}"> to <Route path="${C==="/"?"*":`${C}
   }
   .search-select {
     padding: 0.75rem;
-    /* border-radius: 0.25rem 0 0 0.25rem;
-    border: 1px solid var(--primary-blue-500); */
-    border: none;
+    border: 1px solid var(--primary-blue-400);
+    border-radius: var(--border-radius);
     background: transparent;
     font-size: 1rem;
     color: var(--primary-blue-500);
     outline: none;
     transition: var(--transition);
     position: relative;
-    /* left: 10rem; */
     cursor: pointer;
     &:hover {
       color: var(--primary-blue-700);
@@ -352,6 +346,7 @@ Please change the parent <Route path="${C}"> to <Route path="${C==="/"?"*":`${C}
       text-indent: 10rem;
     }
     .search-select {
+      border: none;
       font-size: 1.2rem;
       left: 10rem;
     }
