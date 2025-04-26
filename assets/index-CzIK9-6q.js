@@ -263,6 +263,7 @@ Please change the parent <Route path="${C}"> to <Route path="${C==="/"?"*":`${C}
     max-width: 100%;
     margin: 0 auto;
     display: grid;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
     padding: 2rem;
@@ -337,6 +338,7 @@ Please change the parent <Route path="${C}"> to <Route path="${C==="/"?"*":`${C}
   @media (min-width: 992px) {
     .form {
       display: flex;
+      gap: 0;
     }
     .main-img {
       width: 25vw;
