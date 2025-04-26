@@ -31,8 +31,6 @@ const Style = styled.section`
     }
   }
   .active {
-    /* background: var(--primary-blue-500);
-    color: var(--white); */
     color: var(--primary-blue-500);
     &:hover {
       color: var(--primary-blue-700);
@@ -40,10 +38,8 @@ const Style = styled.section`
   }
   .prev-btn,
   .next-btn {
-    /* background: var(--background-secondary-color); */
     border-color: transparent;
     background: transparent;
-    /* border-radius: var(--border-radius); */
     font-size: clamp(0.875rem, 1.5vw, 1rem);
     width: 100px;
     height: 40px;

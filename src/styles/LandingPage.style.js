@@ -43,16 +43,14 @@ const Style = styled.section`
   }
   .search-select {
     padding: 0.75rem;
-    /* border-radius: 0.25rem 0 0 0.25rem;
-    border: 1px solid var(--primary-blue-500); */
-    border: none;
+    border: 1px solid var(--primary-blue-400);
+    border-radius: var(--border-radius);
     background: transparent;
     font-size: 1rem;
     color: var(--primary-blue-500);
     outline: none;
     transition: var(--transition);
     position: relative;
-    /* left: 10rem; */
     cursor: pointer;
     &:hover {
       color: var(--primary-blue-700);
@@ -108,6 +106,7 @@ const Style = styled.section`
       text-indent: 10rem;
     }
     .search-select {
+      border: none;
       font-size: 1.2rem;
       left: 10rem;
     }
