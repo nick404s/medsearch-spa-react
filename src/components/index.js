@@ -8,3 +8,4 @@ export { default as MedicationTable } from "./MedicationTable";
 export { default as PaginationBtnContainer } from "./PaginationBtnContainer";
 export { default as DetailsContainer } from "./DetailsContainer";
 export { default as InfoAccordion } from "./InfoAccordion";
+export { default as DetailsModal } from "./DetailsModal";

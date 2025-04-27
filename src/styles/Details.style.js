@@ -1,8 +1,55 @@
 import styled from "styled-components";
 
-const Style = styled.section`
-  .page {
-    min-height: calc(95vh - (var(--nav-height) + var(--footer-height)));
+const Style = styled.aside`
+  .overlay {
+    position: fixed;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dialog[open] {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+  }
+  .modal {
+    /* position: relative; */
+    background: var(--background-secondary-color);
+    width: 95vw;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-2);
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    max-height: calc(95vh - (var(--nav-height) + var(--footer-height)));
+    overflow-y: auto;
+  }
+
+  .btn-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+    background: transparent;
+    border-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--red-dark);
+  }
+
+  .details {
+    min-height: calc(65vh - (var(--nav-height) + var(--footer-height)));
+
     padding: 1rem;
   }
   .title {

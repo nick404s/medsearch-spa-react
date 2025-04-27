@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { useAllMedicationsContext } from "../pages/AllMedications";
+import { DetailsModal } from ".";
 
 const MedicationCard = ({ medication }) => {
+  const [selectedMedication, setSelectedMedication] = useState(null);
+
   const {
     openfda = [],
     purpose = [],
@@ -16,19 +20,27 @@ const MedicationCard = ({ medication }) => {
   return (
     <>
       <div className="medication-row">
-        <button className="btn-link">
-          <Link
+        <button
+          onClick={() => setSelectedMedication(medication)}
+          className="btn-link"
+        >
+          {/* <Link
             to={`/details/medication/${brand_name}`}
             state={{ medication, routeToReturn, searchBy }}
             className="btn-link"
           >
             {brand_name}
-          </Link>
+          </Link> */}
+          {brand_name}
         </button>
       </div>
       <div className="medication-row">{purpose}</div>
       <div className="medication-row">{active_ingredient}</div>
       <div className="medication-row">{inactive_ingredient}</div>
+      <DetailsModal
+        medication={selectedMedication}
+        onClose={() => setSelectedMedication(null)}
+      />
     </>
   );
 };
