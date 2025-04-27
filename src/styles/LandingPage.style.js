@@ -35,7 +35,6 @@ const Style = styled.section`
     color: var(--text-secondary-color);
     outline: none;
     transition: var(--transition);
-    /* text-indent: 10rem; */
     &:focus {
       border-color: var(--primary-blue-500);
       background: transparent;

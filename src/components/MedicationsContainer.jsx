@@ -3,7 +3,6 @@ import { useNavigation } from "react-router-dom";
 import Style from "../styles/MedicationsContainer.style";
 import { useAllMedicationsContext } from "../pages/AllMedications";
 import { MedicationTable, PaginationBtnContainer, Loading } from ".";
-import { SearchParameters } from "../constants/constants";
 
 const MedicationsContainer = () => {
   const navigation = useNavigation();

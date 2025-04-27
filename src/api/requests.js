@@ -13,16 +13,10 @@ const getMedicationsByIngredient = async (searchTerm) => {
     (active_ingredient:"${searchTerm}"+AND+_exists_:"openfda"
     +AND+effective_time:[2020-06-01+TO+2026-12-12])&limit=100&sort=effective_time:desc`;
     const response = await openFDAFetch.get(url);
-    console.log("=== by condition response status: ", response.status);
-
     const data = response.data.results || [];
-    // console.log("data: ", data);
-    // const cleanData = getCleanData(data, searchTerm);
-    // console.log(cleanData);
-    // return cleanData;
     return data;
   } catch (error) {
-    console.log("=== by condition response error: ", error);
+    // console.log("=== by condition response error: ", error);
     return [];
   }
 };
@@ -36,24 +30,13 @@ const getMedicationByCondition = async (searchTerm) => {
     const response = await axios.get(url);
     console.log("=== by condition response status: ", response.status);
     const data = response.data.results || [];
-    // console.log("data: ", data);
     const cleanData = getCleanData(data, searchTerm);
     console.log(cleanData);
     return cleanData;
   } catch (error) {
-    console.log("=== by condition response error: ", error.message);
+    // console.log("=== by condition response error: ", error.message);
     return [];
   }
 };
-
-// get all medications with fetch async
-// const getAllMedications = async (searchBy, searchTerm) => {
-//   console.log(`/medications/by-${searchBy}/?${searchBy}=${searchTerm}`);
-//   const response = await fetch(
-//     ``
-//   );
-//   const data = await response.json();
-//   return data;
-// };
 
 export { getMedicationsByIngredient, getMedicationByCondition };
