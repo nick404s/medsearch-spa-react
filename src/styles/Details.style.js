@@ -4,7 +4,6 @@ const Style = styled.aside`
   .overlay {
     position: fixed;
     inset: 0;
-
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1000;
     transition: var(--transition);
@@ -18,7 +17,6 @@ const Style = styled.aside`
     transform: scale(1);
   }
   .modal {
-    /* position: relative; */
     background: var(--background-secondary-color);
     width: 95vw;
     border-radius: var(--border-radius);
@@ -49,7 +47,6 @@ const Style = styled.aside`
 
   .details {
     min-height: calc(65vh - (var(--nav-height) + var(--footer-height)));
-
     padding: 1rem;
   }
   .title {
@@ -94,7 +91,6 @@ const Style = styled.aside`
   .btn-toggle {
     border: 1px solid var(--grey-300);
     border-radius: var(--border-radius);
-
     background: transparent;
     color: var(--primary-blue-500);
     cursor: pointer;

@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { HomeLayout, Landing, Error, AllMedications, Details } from "./pages";
+import { HomeLayout, Landing, Error, AllMedications } from "./pages";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -12,7 +12,6 @@ const queryClient = new QueryClient({
 });
 
 import { loader as allMedicationsLoader } from "./pages/AllMedications";
-// npm install dompurify
 
 const router = createBrowserRouter(
   [
@@ -29,10 +28,6 @@ const router = createBrowserRouter(
           path: "all-medications",
           element: <AllMedications />,
           loader: allMedicationsLoader(queryClient),
-        },
-        {
-          path: "details/:category/:name",
-          element: <Details />,
         },
       ],
     },
