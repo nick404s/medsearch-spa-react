@@ -34,6 +34,7 @@
 
   /* green */
   --green: #01C4B0;
+  --green-text: #01b6a4;
   --green-dark: #238d82;
 
   /* rest of the colors */
@@ -252,6 +253,11 @@
     margin-top: 1rem;
   }
 
+  .result {
+    color: var(--green-text);
+    font-weight: 600;
+  }
+
   /* loading spinner */
 
   @keyframes spinner {
@@ -266,7 +272,7 @@
     border: 5px solid var(--green);
     border-radius: 50%;
     border-top-color: var(--primary-blue-500);
-    animation: spinner 1s linear infinite;
+    animation: spinner 0.3s linear infinite;
   }
 
 }

@@ -32,7 +32,7 @@ const MedicationsContainer = () => {
           <div className="medication-container">
             <h4 className="search-result title">
               {numberOfMedications} result
-              {numberOfMedications > 1 && "s"} for {searchTerm}
+              {numberOfMedications > 1 && "s"} for <span className="result" > {searchTerm}</span>
             </h4>
             <MedicationTable currentItems={currentItems} />
           </div>

@@ -28,10 +28,8 @@ const getMedicationByCondition = async (searchTerm) => {
     (purpose:"${searchTerm}"+AND+_exists_:"openfda"
     +AND+effective_time:[2020-06-01+TO+2026-12-12])&limit=100&sort=effective_time:desc`;
     const response = await axios.get(url);
-    console.log("=== by condition response status: ", response.status);
     const data = response.data.results || [];
     const cleanData = getCleanData(data, searchTerm);
-    console.log(cleanData);
     return cleanData;
   } catch (error) {
     // console.log("=== by condition response error: ", error.message);

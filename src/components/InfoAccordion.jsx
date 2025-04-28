@@ -13,9 +13,8 @@ const InfoAccordion = ({ title, children }) => {
     <div className="accordion">
       <div className="accordion-header">
         <button className="btn-toggle" onClick={toggleAccordion}>
-          <h4 className={`${isWarning ? "warning-title" : "usage-title"}`}>
-            {title}
-          </h4>
+          {/* <h5 className={`${isWarning ? "warning-title" : "usage-title"}`}> */}
+          <h5>{title}</h5>
           <p className="icon">{isOpen ? <HiMinus /> : <HiPlus />}</p>
         </button>
       </div>

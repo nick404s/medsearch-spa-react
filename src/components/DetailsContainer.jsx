@@ -15,7 +15,9 @@ const DetailsContainer = ({ medication }) => {
 
   return (
     <div className="container condition">
-      <h3 className="title">Medication: {openfda.brand_name}</h3>
+      <h4 className="title">
+        Medication: <span className="result"> {openfda.brand_name}</span>
+      </h4>
       <InfoAccordion title="Usages">
         <p> {indications_and_usage.join(". ")} </p>
         <p> {when_using} </p>
