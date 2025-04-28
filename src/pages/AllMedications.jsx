@@ -31,7 +31,6 @@ export const loader =
     let searchTerm = url.searchParams.get(SearchParameters.SEARCH_TERM);
 
     if (!searchTerm || !searchTerm.trim()) {
-      toast.error("Please enter a search term");
       return redirect("/");
     }
     // sanitize the search term

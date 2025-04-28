@@ -4,8 +4,6 @@ import DetailsContainer from "./DetailsContainer";
 import Style from "../styles/Details.style";
 
 const DetailsModal = ({ medication, onClose }) => {
-  console.log(medication);
-
   const dialogRef = useRef();
 
   useEffect(() => {
