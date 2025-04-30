@@ -3,7 +3,7 @@ import Style from "../styles/MedicationsContainer.style";
 import { useAllMedicationsContext } from "../pages/AllMedications";
 import { MedicationTable, PaginationBtnContainer, Loading } from ".";
 
-const MedicationsContainer = ({ isLoading }) => {
+const MedicationsContainer = () => {
   const { data, searchTerm, searchBy } = useAllMedicationsContext();
   // set pagination
   const itemsPerPage = 5;
@@ -22,28 +22,24 @@ const MedicationsContainer = ({ isLoading }) => {
 
   return (
     <Style>
-      {isLoading ? (
-        <Loading />
-      ) : (
-        <div className="wrapper">
-          <div className="medication-container">
-            <h4 className="search-result title">
-              {numberOfMedications} result
-              {numberOfMedications > 1 && "s"} for{" "}
-              <span className="result"> {searchTerm}</span>
-            </h4>
-            <MedicationTable currentItems={currentItems} />
-          </div>
-
-          {numberOfPages > 1 && (
-            <PaginationBtnContainer
-              numberOfPages={numberOfPages}
-              currentPage={currentPage}
-              handlePageChange={handlePageChange}
-            />
-          )}
+      <div className="wrapper">
+        <div className="medication-container">
+          <h4 className="search-result title">
+            {numberOfMedications} result
+            {numberOfMedications > 1 && "s"} for{" "}
+            <span className="result"> {searchTerm}</span>
+          </h4>
+          <MedicationTable currentItems={currentItems} />
         </div>
-      )}
+
+        {numberOfPages > 1 && (
+          <PaginationBtnContainer
+            numberOfPages={numberOfPages}
+            currentPage={currentPage}
+            handlePageChange={handlePageChange}
+          />
+        )}
+      </div>
     </Style>
   );
 };

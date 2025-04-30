@@ -8,7 +8,7 @@ import {
   getMedicationByCondition,
 } from "../api/requests";
 import { SearchParameters } from "../constants/constants";
-import { NavigationButton, MedicationsContainer } from "../components";
+import { NavigationButton, MedicationsContainer, Loading } from "../components";
 
 const medicationsQuery = (searchTerm, searchBy) => ({
   queryKey: ["medications", { searchTerm, searchBy }],
@@ -59,12 +59,14 @@ const AllMedications = () => {
   const { searchTerm, searchBy } = useLoaderData();
   const { data, isLoading } = useQuery(medicationsQuery(searchTerm, searchBy));
 
-  return (
+  return isLoading ? (
+    <Loading />
+  ) : (
     <AllMedicationsContext.Provider value={{ data, searchTerm, searchBy }}>
       <div className="nav-container">
         <NavigationButton isBack={true} />
       </div>
-      <MedicationsContainer isLoading={isLoading} />
+      <MedicationsContainer />
     </AllMedicationsContext.Provider>
   );
 };
