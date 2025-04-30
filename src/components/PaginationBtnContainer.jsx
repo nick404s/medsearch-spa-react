@@ -6,9 +6,9 @@ const PaginationBtnContainer = ({
   currentPage,
   handlePageChange,
 }) => {
-  const pages = Array.from({ length: numberOfPages }, (_, index) => {
-    return index + 1; // so the pages start from 1
-  });
+  // const pages = Array.from({ length: numberOfPages }, (_, index) => {
+  //   return index + 1; // so the pages start from 1
+  // });
 
   const handlePageNumber = (e, pageNumber) => {
     handlePageChange(e, pageNumber);

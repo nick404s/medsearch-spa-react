@@ -64,7 +64,7 @@ const Style = styled.aside`
   .accordion-content {
     border-radius: var(--border-radius);
     padding: 1rem;
-
+    text-align: left;
     line-height: 1.4;
     letter-spacing: var(--letter-spacing);
     font-size: var(--table-fontsize);
