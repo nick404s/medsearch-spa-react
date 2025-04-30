@@ -1,4 +1,4 @@
-import { HiChevronDoubleLeft, HiChevronDoubleRight } from "react-icons/hi";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import Style from "../styles/PaginationBtnContainer.style";
 
 const PaginationBtnContainer = ({
@@ -24,7 +24,7 @@ const PaginationBtnContainer = ({
           handlePageNumber(e, prevPage);
         }}
       >
-        <HiChevronDoubleLeft />
+        <HiChevronLeft />
         prev
       </button>
       <div className="btn-container">
@@ -39,7 +39,7 @@ const PaginationBtnContainer = ({
         }}
       >
         next
-        <HiChevronDoubleRight />
+        <HiChevronRight />
       </button>
     </Style>
   );
