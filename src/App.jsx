@@ -35,10 +35,10 @@ const router = createHashRouter(
         },
       ],
     },
-  ],
-  {
-    basename: import.meta.env.BASE_URL,
-  }
+  ]
+  // {
+  //   basename: import.meta.env.BASE_URL, // no need with the hash router
+  // }
 );
 
 const App = () => {
