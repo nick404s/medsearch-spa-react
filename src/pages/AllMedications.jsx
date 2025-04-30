@@ -57,14 +57,14 @@ const AllMedicationsContext = createContext();
 
 const AllMedications = () => {
   const { searchTerm, searchBy } = useLoaderData();
-  const { data } = useQuery(medicationsQuery(searchTerm, searchBy));
+  const { data, isLoading } = useQuery(medicationsQuery(searchTerm, searchBy));
 
   return (
     <AllMedicationsContext.Provider value={{ data, searchTerm, searchBy }}>
       <div className="nav-container">
         <NavigationButton isBack={true} />
       </div>
-      <MedicationsContainer />
+      <MedicationsContainer isLoading={isLoading} />
     </AllMedicationsContext.Provider>
   );
 };

@@ -255,7 +255,6 @@
 
   .result {
     color: var(--green-text);
-    font-weight: 600;
   }
 
   /* loading spinner */

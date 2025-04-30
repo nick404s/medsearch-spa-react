@@ -1,12 +1,9 @@
 import { useState } from "react";
-import { useNavigation } from "react-router-dom";
 import Style from "../styles/MedicationsContainer.style";
 import { useAllMedicationsContext } from "../pages/AllMedications";
 import { MedicationTable, PaginationBtnContainer, Loading } from ".";
 
-const MedicationsContainer = () => {
-  const navigation = useNavigation();
-  const isPageLoading = navigation.state === "loading";
+const MedicationsContainer = ({ isLoading }) => {
   const { data, searchTerm, searchBy } = useAllMedicationsContext();
   // set pagination
   const itemsPerPage = 5;
@@ -25,14 +22,15 @@ const MedicationsContainer = () => {
 
   return (
     <Style>
-      {isPageLoading ? (
+      {isLoading ? (
         <Loading />
       ) : (
         <div className="wrapper">
           <div className="medication-container">
             <h4 className="search-result title">
               {numberOfMedications} result
-              {numberOfMedications > 1 && "s"} for <span className="result" > {searchTerm}</span>
+              {numberOfMedications > 1 && "s"} for{" "}
+              <span className="result"> {searchTerm}</span>
             </h4>
             <MedicationTable currentItems={currentItems} />
           </div>

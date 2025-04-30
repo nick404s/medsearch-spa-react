@@ -59,12 +59,12 @@ const Style = styled.aside`
 
   .accordion {
     border-radius: var(--border-radius);
-    margin-bottom: 1rem;
+    padding-bottom: 2rem;
   }
   .accordion-content {
     border-radius: var(--border-radius);
     padding: 1rem;
-    margin-bottom: 1rem;
+
     line-height: 1.4;
     letter-spacing: var(--letter-spacing);
     font-size: var(--table-fontsize);
