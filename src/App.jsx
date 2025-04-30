@@ -1,4 +1,8 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  createHashRouter,
+} from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { HomeLayout, Landing, Error, AllMedications } from "./pages";
@@ -13,7 +17,7 @@ const queryClient = new QueryClient({
 
 import { loader as allMedicationsLoader } from "./pages/AllMedications";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: "/",
@@ -47,7 +51,3 @@ const App = () => {
 };
 
 export default App;
-
-/**
- * npm install @tanstack/react-query @tanstack/react-query-devtools axios dayjs? react-icons react-router-dom react-toastify recharts? styled-components
- */
