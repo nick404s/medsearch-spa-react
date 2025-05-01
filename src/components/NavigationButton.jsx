@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { HiChevronLeft, HiHome } from "react-icons/hi";
-const NavigationButton = ({ isBack }) => {
+import { HiChevronLeft } from "react-icons/hi";
+const NavigationButton = () => {
   const navigate = useNavigate();
 
   return (
@@ -11,17 +11,8 @@ const NavigationButton = ({ isBack }) => {
           navigate("/");
         }}
       >
-        {isBack ? (
-          <>
-            <HiChevronLeft />
-            Back
-          </>
-        ) : (
-          <>
-            <HiHome />
-            Home
-          </>
-        )}
+        <HiChevronLeft />
+        Back
       </button>
     </div>
   );

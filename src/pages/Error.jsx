@@ -4,18 +4,12 @@ import Style from "../styles/Error.style";
 const Error = () => {
   const error = useRouteError();
 
-  // console.log("----- error\n: ", error);
-
   if (error.status === 404) {
     return (
       <Style>
         <div>
           <h3>404 Not Found</h3>
-          {error.response ? (
-            <p>Sorry, {error.response.data.detail}</p>
-          ) : (
-            <p>Sorry, the page you are looking for does not exist.</p>
-          )}
+          <p>Sorry, the page you are looking for does not exist.</p>
           <NavigationButton />
         </div>
       </Style>
@@ -26,10 +20,8 @@ const Error = () => {
     <Style>
       <div>
         <h3>Error. Something went wrong...</h3>
-        {/* diplay the actual error */}
-        <p>{error.message}</p>
+        <NavigationButton />
       </div>
-      <NavigationButton />
     </Style>
   );
 };
