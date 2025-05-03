@@ -13,6 +13,10 @@ const DetailsContainer = ({ medication }) => {
     questions = [],
   } = medication;
 
+  const renderedWarnings = warnings[0].split(".").map((warning, index) => {
+    return <p key={index}> {`${warning}.`}</p>;
+  });
+
   return (
     <div className="container condition">
       <h4 className="title">
@@ -26,7 +30,8 @@ const DetailsContainer = ({ medication }) => {
         <p> {questions[0]} </p>
       </InfoAccordion>
       <InfoAccordion title="Warnings">
-        <p> {warnings[0]} </p>
+        {/* <p> {renderedWarnings} </p> */}
+        {renderedWarnings}
       </InfoAccordion>
     </div>
   );
