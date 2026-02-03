@@ -7,3 +7,11 @@
 #### Using OpenFDA data as a source
 
 [Link to the OpenFDA API](https://open.fda.gov/apis/)
+
+### Tech Used
+
+- JavaScript
+- React
+- TanStack Query
+- Styled Components
+
