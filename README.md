@@ -11,7 +11,7 @@
 # MedSearch Web App
 
 A simple, fast, single‑page React application that lets users search medications by ingredient or condition using real data from the OpenFDA API.\
-Built with modern React tooling, responsive UI components, and client‑side caching for a smooth user experience.
+Built with modern React tooling, responsive UI components, and client‑side caching for a smooth user experience.\
 [Live Demo](https://nick404s.github.io/medsearch-spa-react/)
 
 ---
