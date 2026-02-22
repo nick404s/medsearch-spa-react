@@ -1,6 +1,8 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/React-18.0-blue" alt="React Badge"> 
-  <img src="https://img.shields.io/badge/JavaScript-ES6+-yellow" alt="JavaScript Badge"> 
+  <img src="https://img.shields.io/badge/React-19.0-blue" alt="React Badge"> 
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-yellow" alt="JavaScript Badge">
+  <img src="https://img.shields.io/badge/Vite-Dev%20Server-646CFF" alt="Vite Badge">
+  <img src="https://img.shields.io/badge/Axios-HTTP%20Client-purple" alt="Axios Badge">
   <img src="https://img.shields.io/badge/Styled--Components-v5.3-pink" alt="Styled Components Badge"> 
   <img src="https://img.shields.io/badge/TanStack%20Query-v5-orange" alt="TanStack Query Badge"> 
   <img src="https://img.shields.io/badge/OpenFDA-API-lightgrey" alt="OpenFDA API Badge"> 
@@ -30,6 +32,8 @@ Built with modern React tooling, responsive UI components, and client‑side cac
 
 - JavaScript
 - React
+- Vite
+- Axios
 - TanStack Query
 - Styled Components
 - OpenFDA API [Link to the OpenFDA API](https://open.fda.gov/apis/)
