@@ -37,4 +37,5 @@ Built with modern React tooling, responsive UI components, and client‑side cac
 - TanStack Query
 - Styled Components
 - OpenFDA API [Link to the OpenFDA API](https://open.fda.gov/apis/)
+- GitHub Pages
 
