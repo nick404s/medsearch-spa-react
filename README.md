@@ -14,6 +14,8 @@ A simple, fast, single‑page React application that lets users search medicatio
 Built with modern React tooling, responsive UI components, and client‑side caching for a smooth user experience.
 [Live Demo](https://nick404s.github.io/medsearch-spa-react/)
 
+---
+
 ## Features
 
 - Search medications by active ingredient or medical condition
@@ -21,6 +23,8 @@ Built with modern React tooling, responsive UI components, and client‑side cac
 - Client‑side caching with TanStack Query for faster repeated searches
 - Toast notifications for errors and user feedback
 - Responsive UI built with Styled-Components
+
+---
 
 ## Tech Used
 
